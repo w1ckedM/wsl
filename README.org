@@ -1,1 +1,3 @@
 #+title: README
+
+installation and configuration of wsl
