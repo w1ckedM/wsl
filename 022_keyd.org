@@ -1,0 +1,47 @@
+#+title: app - keyd
+
+* keyd
+*** install from source
+#+begin_src sh :shebang #!/usr/bin/env bash
+git clone https://github.com/rvaiya/keyd &&
+    cd keyd &&
+    make &&
+    make install &&
+    sudo systemctl enable --now keyd
+exit
+#+end_src
+*** config
+#+begin_src conf :tangle "/sudo::/etc/keyd/default.conf"
+[ids]
+
+,*
+
+[main]
+
+# CapsLk/Return:
+#   act as Esc/Return when tapped
+#   act as Ctrl when held
+capslock = overload(control, esc)
+enter = overload(control, enter)
+
+# Esc:
+#   remap to Caps
+esc = capslock
+
+# Space:
+#   act as Space when tapped
+#   act as Meta when held
+space = overload(meta,space)
+
+# Shift/Meta/Ctrl/Alt:
+#   no need to hold
+shift = oneshot(shift)
+meta = oneshot(meta)
+control = oneshot(control)
+alt = oneshot(alt)
+rightalt = oneshot(altgr)
+
+f+j = pagedown
+g+h = pageup
+
+#+end_src

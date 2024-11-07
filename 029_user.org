@@ -1,0 +1,44 @@
+#+title: config - user
+
+* user config
+** bashrc
+ + modify accordingly - [[file:~/.bashrc][.bashrc]]
+#+begin_src bash
+
+# customize
+
+set -o vi
+set -o noclobber
+
+export PATH=$PATH:/usr/share/bin:$HOME/.local/bin:$HOME/.config/emacs/bin:
+export HISTSIZE=1000
+export HISTTIMEFORMAT="%Y-%m-%d,%H:%M:%S|"
+export HISTCONTROL="$HISTCONTROL erasedups:ignoreboth"
+export EDITOR=vi
+export FZF_DEFAULT_OPTS=" \
+    --color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
+    --color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
+    --color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+alias l="eza -g --group-directories-first"
+alias ll="eza -lg --group-directories-first"
+alias la="eza -ag --group-directories-first"
+alias lr="eza -agR --group-directories-first"
+alias lt="eza -T --group-directories-first"
+alias lla="eza -alg --group-directories-first"
+
+alias sss="sudo apt-get update"
+alias uuu="sudo apt-get upgrade"
+alias iii="sudo apt-get install"
+alias ppp="sudo apt-get purge"
+alias rrr="sudo apt-get autoremove"
+
+alias cc="clitrans"
+alias nn="neofetch"
+
+eval "$(zoxide init bash)"
+#+end_src

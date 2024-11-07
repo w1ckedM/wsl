@@ -1,0 +1,41 @@
+#+title: application - doomemacs
+
+* install doom
+** install prerequisite
+#+begin_src sh :shebang #!/usr/bin/env bash
+sudo apt-get install git emacs-pgtk fd-find ripgrep cmake libvterm-bin libtool-bin fonts-lxgw-wenkai
+exit
+#+end_src
+** git
+#+begin_src sh :shebang #!/usr/bin/env bash
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+exit
+#+end_src
+** config
+**** modify accordingly - [[file:~/.config/doom/config.el][.config/doom/config.el]]
+#+begin_src conf
+(setq doom-font (font-spec :family "LXGW WenKai" :size 20)
+      doom-variable-pitch-font (font-spec :family "LXGW WenKai" :size 20))
+
+(setq display-line-numbers-type 'relative)
+
+(setq doom-theme 'catppuccin)
+(setq catppuccin-flavor 'frappe)
+
+(org-babel-do-load-languages
+  'org-babel-load-languages
+  '(
+    (emacs-lisp . t)
+    (sh . t)
+    (python . t)))
+#+end_src
+**** modify accordingly - [[file:~/.config/doom/packages.el][.config/doom/packages.el]]
+#+begin_src conf
+(package! catppuccin-theme)
+#+end_src
+**** modify accordingly - [[file:~/.config/doom/init.el][.config/doom/init.el]]
+** install
+#+begin_src sh :shebang #!/usr/bin/env bash
+~/.config/emacs/bin/doom install
+exit
+#+end_src

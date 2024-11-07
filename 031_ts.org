@@ -1,0 +1,24 @@
+#+title: trouble shoot
+#+startup: show2levels
+
+* network - hns error
+#+begin_src powershell
+
+wsl --shutdown
+net stop hns
+net start hns
+
+#+end_src
+* reset root passwd
+#+begin_src powershell
+
+wsl -d Debian -u root
+
+#+end_src
+* mount device
+#+begin_src powershell
+
+GET-CimInstance -query "SELECT * from Win32_DiskDrive"
+wsl --mount <DiskPath> --bare
+
+#+end_src

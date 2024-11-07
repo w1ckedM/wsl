@@ -1,0 +1,24 @@
+#+title: config - git
+#+startup: show2levels
+
+* git config
+** gitconfig
+#+begin_src conf :tangle "/sudo::~/.gitconfig"
+[user]
+        name = w1ckedM
+        email =
+[core]
+	fileMode=true
+#[url "https://gitclone.com/github.com"]
+#     insteadof = https://github.com
+#+end_src
+** netrc
+#+begin_src conf :tangle "/sudo::~/.netrc"
+machine gitlab.com
+login w1ckedM
+password
+
+machine github.com
+login w1ckedM
+password
+#+end_src

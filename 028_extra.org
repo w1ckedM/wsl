@@ -1,0 +1,7 @@
+#+title: app - extra
+
+** install packages
+#+begin_src sh :shebang #!/usr/bin/env bash
+sudo apt-get install zoxide eza fzf btop neofetch
+exit
+#+end_src

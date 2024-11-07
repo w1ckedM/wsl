@@ -1,0 +1,12 @@
+#+title: install wsl/debian
+#+startup: show2levels
+
+* install
+** setup sudo for powershell
+ - Settings > for Developers
+** install wsl - debian
+#+begin_src powershell
+wsl --install -d debian
+wsl --set-default Debian
+wsl -d Debian
+#+end_src

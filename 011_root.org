@@ -1,0 +1,15 @@
+#+title: config - root
+#+startup: show2levels
+
+* root
+** bashrc
+#+begin_src bash :tangle "/sudo::/root/.bashrc"
+if [[ $- != *i* ]]; then
+    return
+fi
+
+set -o vi
+set -o noclobber
+
+export PATH=$PATH:/usr/local/bin:
+#+end_src
