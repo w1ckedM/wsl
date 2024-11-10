@@ -3,13 +3,13 @@
 
 * etc config
 ** systemd
-*** config
+*** config - [[file:/etc/wsl.conf][wsl.conf]]
 #+begin_src bash :tangle "/sudo::/etc/wsl.conf"
 [boot]
 systemd=true
 #+end_src
 ** repos
-*** config
+*** config 
 #+begin_src bash :tangle "/sudo::/etc/apt/sources.list"
 deb http://mirrors.ustc.edu.cn/debian trixie main contrib non-free
 deb http://mirrors.ustc.edu.cn/debian trixie-updates main contrib non-free
