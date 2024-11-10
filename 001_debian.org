@@ -8,5 +8,5 @@
 #+begin_src powershell
 wsl --install -d debian
 wsl --set-default Debian
-wsl -d Debian
 #+end_src
+** reboot!!!
