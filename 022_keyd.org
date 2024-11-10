@@ -3,6 +3,7 @@
 * keyd
 *** install from source
 #+begin_src sh :shebang #!/usr/bin/env bash
+apt install build-essential
 git clone https://github.com/rvaiya/keyd &&
     cd keyd &&
     make &&
