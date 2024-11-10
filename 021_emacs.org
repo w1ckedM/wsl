@@ -3,7 +3,7 @@
 * install doom
 ** install prerequisite
 #+begin_src sh :shebang #!/usr/bin/env bash
-sudo apt-get install git emacs-pgtk fd-find ripgrep cmake libvterm-bin cmake shellcheck libtool-bin fonts-lxgw-wenkai
+sudo apt install git emacs-pgtk fd-find ripgrep cmake libvterm-bin cmake shellcheck libtool-bin fonts-lxgw-wenkai
 exit
 #+end_src
 ** git
