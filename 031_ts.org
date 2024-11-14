@@ -22,3 +22,19 @@ GET-CimInstance -query "SELECT * from Win32_DiskDrive"
 wsl --mount <DiskPath> --bare
 
 #+end_src
+* v2rayn
+#+begin_src .gitconfig
+
+[wsl2]
+memory=10737418240
+defaultVhdSize=1073741824000
+nestedVirtualization=false
+
+[experimental]
+autoMemoryReclaim=gradual  
+networkingMode=mirrored
+dnsTunneling=true
+firewall=true
+autoProxy=true
+
+#+end_src
