@@ -1,6 +1,10 @@
 #+title: trouble shoot
 #+startup: show2levels
 
+* long path support
+#+begin_src
+Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
+#+end_src
 * network - hns error
 #+begin_src powershell
 
