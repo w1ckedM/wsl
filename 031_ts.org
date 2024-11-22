@@ -38,3 +38,10 @@ firewall=true
 autoProxy=true
 
 #+end_src
+* transparency
+#+begin_src settings.json
+"defaults": 
+{
+    "opacity": 75
+},
+#+end_src
