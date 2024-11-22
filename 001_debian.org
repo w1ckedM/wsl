@@ -6,7 +6,7 @@
  - Settings > for Developers
 ** install wsl - debian
 #+begin_src powershell
-wsl --install -d debian
-wsl --set-default Debian
+sudo wsl --install -d debian
+sudo wsl --set-default Debian
 #+end_src
 ** reboot!!!
