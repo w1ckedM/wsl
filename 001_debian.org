@@ -4,6 +4,8 @@
 * install
 ** setup sudo for powershell
  - Settings > for Developers
+** setup administration w/o popup
+ - run "uac"
 ** install wsl - debian
 #+begin_src powershell
 sudo wsl --install -d debian
